@@ -1,42 +1,12 @@
-// import type { Config } from "tailwindcss";
-
-// const config: Config = {
-//   content: [
-//     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         background: "var(--background)",
-//         foreground: "var(--foreground)",
-//       },
-//     },
-//   },
-//   plugins: [],
-// };
-// export default config;
-
-import type { Config } from "tailwindcss";
-const { fontFamily } = require("tailwindcss/defaultTheme");
-
-const config = {
-  darkMode: ["class"],
-  // content: [
-  //   "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-  //   "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-  //   "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  //   "./pages/**/*.{ts,tsx}",
-  //   "./components/**/*.{ts,tsx}",
-  //   "./app/**/*.{ts,tsx}",
-  //   "./src/**/*.{ts,tsx}",
-  // ],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   prefix: "",
   theme: {
@@ -93,6 +63,4 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
-
-export default config;
+};
